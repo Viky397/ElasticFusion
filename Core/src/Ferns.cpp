@@ -276,7 +276,7 @@ Eigen::Matrix4f Ferns::findFrame(std::vector<SurfaceConstraint> & constraints,
 
 //        std::cout << rgbd.lastICPError << ", " << rgbd.lastICPCount << ", " << photoError << std::endl;
 
-        if(rgbd.lastICPError < 0.0003 && rgbd.lastICPCount > icpCountThresh && photoError < photoThresh)
+        if(rgbd.lastICPError < 0.0006 && rgbd.lastICPCount > 1800 && photoError < photoThresh)
         {
             lastClosest = minId;
 
